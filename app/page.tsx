@@ -68,7 +68,7 @@ export default function Home() {
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-400 md:text-xl">
               Computer Scientist working across machine learning, software engineering
-              and geospatial systems — turning complex data into useful, deployable products.
+              and geospatial systems, turning complex data into useful, deployable products.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
