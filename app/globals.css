@@ -179,3 +179,60 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.tech-carousel {
+  transition:
+    transform 340ms ease,
+    border-color 340ms ease,
+    box-shadow 340ms ease;
+}
+
+.tech-carousel:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow:
+    0 30px 85px rgba(0, 0, 0, 0.35),
+    0 0 48px rgba(34, 211, 238, 0.07);
+}
+
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.geo-grid {
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  transform: perspective(500px) rotateX(58deg) scale(1.35);
+  transform-origin: center 65%;
+}
+
+.ai-orbit {
+  animation: orbit-spin 15s linear infinite;
+}
+
+.ai-orbit-reverse {
+  animation: orbit-spin-reverse 11s linear infinite;
+}
+
+.ai-node {
+  animation: node-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: .55; transform: scale(.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
