@@ -39,30 +39,6 @@ const skillGroups = [
   }
 ];
 
-const experience = [
-  {
-    role: "GIS & Survey",
-    organisation: "Survey of Kenya · Ministry of Lands",
-    period: "2024 — Present",
-    detail:
-      "Spatial-data, mapping and survey support across government geospatial workflows, continuing after an initial internship."
-  },
-  {
-    role: "GIS Contractor & Data Collector",
-    organisation: "Kenya Power & Lighting Company",
-    period: "2022 — 2023",
-    detail:
-      "Mapped electricity connections and supported GIS data collection, analysis and implementation work in Nairobi County."
-  },
-  {
-    role: "GIS & Survey Intern",
-    organisation: "County Government of Nyeri",
-    period: "2020",
-    detail:
-      "Supported GIS, field-survey and spatial-data activities within county government workflows."
-  }
-];
-
 export default function Home() {
   const featured = projects.filter((project) => project.featured);
   const supporting = projects.filter((project) => !project.featured);
@@ -169,11 +145,11 @@ export default function Home() {
             <div className="mt-4 space-y-5 text-sm">
               <div>
                 <p className="font-medium text-slate-200">MSc Computer Science</p>
-                <p className="mt-1 text-slate-500">University of Nairobi · 2024–2026</p>
+                <p className="mt-1 text-slate-500">University of Nairobi</p>
               </div>
               <div>
                 <p className="font-medium text-slate-200">BSc Geospatial Engineering</p>
-                <p className="mt-1 text-slate-500">University of Nairobi · 2015–2021</p>
+                <p className="mt-1 text-slate-500">University of Nairobi</p>
               </div>
             </div>
           </div>
@@ -227,31 +203,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="section-shell border-y border-white/[0.06] bg-white/[0.012]">
-        <SectionHeading
-          eyebrow="Experience"
-          title="Technology grounded in field and operational work."
-        />
-
-        <div className="grid gap-5">
-          {experience.map((item, index) => (
-            <article key={item.role + item.organisation} className="panel grid gap-5 md:grid-cols-[180px_1fr]">
-              <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-300">
-                  0{index + 1}
-                </span>
-                <p className="mt-3 text-sm text-slate-500">{item.period}</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white">{item.role}</h3>
-                <p className="mt-1 text-sm font-medium text-slate-300">{item.organisation}</p>
-                <p className="mt-4 max-w-3xl leading-7 text-slate-400">{item.detail}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section-shell">
         <div className="relative overflow-hidden rounded-[2rem] border border-accent-400/15 bg-gradient-to-br from-cyan-400/[0.09] via-white/[0.025] to-blue-500/[0.05] p-8 md:p-12">
           <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-cyan-400/10 blur-[90px]" />
@@ -288,7 +239,7 @@ export default function Home() {
 
       <footer className="border-t border-white/[0.06]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between md:px-8">
-          <p>© 2026 Oscar Muchiri. Built with Next.js & TypeScript.</p>
+          <p>© 2026 Oscar Muchiri.</p>
           <a href="#top" className="transition hover:text-slate-300">Back to top ↑</a>
         </div>
       </footer>
