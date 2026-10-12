@@ -49,13 +49,13 @@ export default function Home() {
 
       <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden border-b border-white/[0.06] pt-20">
         <div className="ambient-grid absolute inset-0 -z-20 opacity-50" />
-        <div className="absolute left-[8%] top-[18%] -z-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-[110px]" />
+        <div className="orb-float absolute left-[8%] top-[18%] -z-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-[110px]" />
         <div className="absolute bottom-[15%] right-[8%] -z-10 h-80 w-80 rounded-full bg-blue-600/10 blur-[120px]" />
 
         <div className="mx-auto grid w-full max-w-7xl items-center gap-14 px-5 py-24 md:px-8 lg:grid-cols-[1.18fr_.82fr]">
           <div>
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent-400/20 bg-accent-400/[0.06] px-3 py-1.5 text-xs font-medium text-cyan-100">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
+              <span className="status-dot h-1.5 w-1.5 rounded-full bg-accent-300" />
               Computer Science × Geospatial Engineering
             </div>
 
@@ -74,15 +74,15 @@ export default function Home() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 rounded-full bg-accent-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-cyan-200"
+                className="group inline-flex items-center gap-2 rounded-full bg-accent-400 px-5 py-3 text-sm font-semibold text-ink-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 hover:shadow-[0_12px_30px_rgba(34,211,238,0.18)] active:translate-y-0"
               >
-                View projects <ArrowDown size={16} />
+                View projects <ArrowDown size={16} className="transition-transform duration-300 group-hover:translate-y-0.5" />
               </a>
               <a
                 href="mailto:oscarmuchiri9@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/[0.07]"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-5 py-3 text-sm font-medium text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/25 hover:bg-white/[0.07] hover:text-white active:translate-y-0"
               >
-                <Mail size={16} /> Get in touch
+                <Mail size={16} className="transition-transform duration-300 group-hover:scale-110" /> Get in touch
               </a>
             </div>
 
@@ -95,14 +95,14 @@ export default function Home() {
 
           <div className="relative mx-auto w-full max-w-[430px]">
             <div className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-cyan-400/10 to-blue-600/5 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl">
+            <div className="profile-card relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-ink-850">
                 <Image
                   src="https://avatars.githubusercontent.com/u/153835380?v=4"
                   alt="Oscar Muchiri"
                   fill
                   priority
-                  className="object-cover grayscale-[15%]"
+                  className="object-cover grayscale-[15%] transition-transform duration-700 hover:scale-[1.025]"
                   sizes="(max-width: 1024px) 80vw, 380px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-transparent" />
@@ -184,16 +184,16 @@ export default function Home() {
 
         <div className="grid gap-5 md:grid-cols-2">
           {skillGroups.map(({ title, icon: Icon, skills }) => (
-            <div key={title} className="panel">
+            <div key={title} className="panel group">
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-xl border border-accent-400/15 bg-accent-400/[0.06] text-accent-300">
+                <span className="grid h-10 w-10 place-items-center rounded-xl border border-accent-400/15 bg-accent-400/[0.06] text-accent-300 transition-all duration-300 group-hover:scale-105 group-hover:border-accent-400/30 group-hover:bg-accent-400/[0.10]">
                   <Icon size={20} />
                 </span>
                 <h3 className="font-semibold text-white">{title}</h3>
               </div>
               <div className="mt-5 flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <span key={skill} className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1.5 text-sm text-slate-400">
+                  <span key={skill} className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1.5 text-sm text-slate-400 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/20 hover:bg-accent-400/[0.05] hover:text-slate-200">
                     {skill}
                   </span>
                 ))}
@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       <section className="section-shell">
-        <div className="relative overflow-hidden rounded-[2rem] border border-accent-400/15 bg-gradient-to-br from-cyan-400/[0.09] via-white/[0.025] to-blue-500/[0.05] p-8 md:p-12">
+        <div className="contact-panel relative overflow-hidden rounded-[2rem] border border-accent-400/15 bg-gradient-to-br from-cyan-400/[0.09] via-white/[0.025] to-blue-500/[0.05] p-8 md:p-12">
           <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-cyan-400/10 blur-[90px]" />
           <div className="relative grid items-end gap-8 lg:grid-cols-[1fr_auto]">
             <div>
@@ -220,17 +220,17 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <a
                 href="mailto:oscarmuchiri9@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full bg-accent-400 px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-cyan-200"
+                className="group inline-flex items-center gap-2 rounded-full bg-accent-400 px-5 py-3 text-sm font-semibold text-ink-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 hover:shadow-[0_12px_30px_rgba(34,211,238,0.18)] active:translate-y-0"
               >
-                <Mail size={16} /> Email me
+                <Mail size={16} className="transition-transform duration-300 group-hover:scale-110" /> Email me
               </a>
               <a
                 href="https://github.com/OscarMuchiri"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-950/40 px-5 py-3 text-sm font-medium text-white transition hover:border-white/20"
+                className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-ink-950/40 px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/25 hover:bg-ink-950/70 active:translate-y-0"
               >
-                <Github size={16} /> GitHub <ArrowUpRight size={14} />
+                <Github size={16} className="transition-transform duration-300 group-hover:rotate-6" /> GitHub <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function Home() {
       <footer className="border-t border-white/[0.06]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between md:px-8">
           <p>© 2026 Oscar Muchiri.</p>
-          <a href="#top" className="transition hover:text-slate-300">Back to top ↑</a>
+          <a href="#top" className="transition-all duration-300 hover:-translate-y-0.5 hover:text-slate-300">Back to top ↑</a>
         </div>
       </footer>
     </main>
