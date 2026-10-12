@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -13,6 +12,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
+import HeroVisualCarousel from "@/components/HeroVisualCarousel";
 import SectionHeading from "@/components/SectionHeading";
 import { projects } from "@/data/projects";
 
@@ -93,28 +93,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[430px]">
-            <div className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-cyan-400/10 to-blue-600/5 blur-3xl" />
-            <div className="profile-card relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-2xl">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-ink-850">
-                <Image
-                  src="https://avatars.githubusercontent.com/u/153835380?v=4"
-                  alt="Oscar Muchiri"
-                  fill
-                  priority
-                  className="object-cover grayscale-[15%] transition-transform duration-700 hover:scale-[1.025]"
-                  sizes="(max-width: 1024px) 80vw, 380px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-transparent" />
-                <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/10 bg-ink-950/70 p-4 backdrop-blur-xl">
-                  <p className="text-sm font-semibold text-white">Machine Learning · Software · GIS</p>
-                  <p className="mt-1 text-xs leading-5 text-slate-400">
-                    Designing systems that connect computational intelligence with spatial thinking.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <HeroVisualCarousel />
         </div>
       </section>
 
