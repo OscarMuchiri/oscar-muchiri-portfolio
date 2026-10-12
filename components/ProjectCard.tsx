@@ -14,7 +14,7 @@ export default function ProjectCard({
   return (
     <article
       className={[
-        "group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] shadow-glow transition duration-300 hover:-translate-y-1 hover:border-accent-400/30 hover:bg-white/[0.055]",
+        "project-card group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] shadow-glow transition-all duration-300 hover:-translate-y-1.5 hover:border-accent-400/30 hover:bg-white/[0.055] hover:shadow-[0_24px_70px_rgba(0,0,0,0.26)]",
         featured ? "grid min-h-[420px] lg:grid-cols-[1.08fr_.92fr]" : ""
       ].join(" ")}
     >
@@ -30,7 +30,7 @@ export default function ProjectCard({
             alt={project.imageAlt ?? project.title}
             fill
             unoptimized
-            className="object-cover opacity-90 transition duration-500 group-hover:scale-[1.025] group-hover:opacity-100"
+            className="object-cover opacity-90 transition-all duration-700 group-hover:scale-[1.045] group-hover:opacity-100"
             sizes={featured ? "(max-width: 1024px) 100vw, 55vw" : "(max-width: 768px) 100vw, 33vw"}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink-950/55 via-transparent to-transparent" />
@@ -42,7 +42,7 @@ export default function ProjectCard({
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent-300">
             {project.eyebrow}
           </p>
-          <h3 className={featured ? "text-2xl font-semibold text-white md:text-3xl" : "text-xl font-semibold text-white"}>
+          <h3 className={featured ? "text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-cyan-50 md:text-3xl" : "text-xl font-semibold text-white transition-colors duration-300 group-hover:text-cyan-50"}>
             {project.title}
           </h3>
           <p className="mt-4 leading-7 text-slate-400">{project.description}</p>
@@ -52,7 +52,7 @@ export default function ProjectCard({
               {project.metrics.map((metric) => (
                 <span
                   key={metric}
-                  className="rounded-full border border-accent-400/15 bg-accent-400/[0.06] px-3 py-1.5 text-xs font-medium text-cyan-100"
+                  className="rounded-full border border-accent-400/15 bg-accent-400/[0.06] px-3 py-1.5 text-xs font-medium text-cyan-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/30 hover:bg-accent-400/[0.11]"
                 >
                   {metric}
                 </span>
@@ -64,7 +64,7 @@ export default function ProjectCard({
             {project.stack.map((item) => (
               <span
                 key={item}
-                className="rounded-md bg-white/[0.055] px-2.5 py-1 text-xs text-slate-400"
+                className="rounded-md bg-white/[0.055] px-2.5 py-1 text-xs text-slate-400 transition-colors duration-300 hover:bg-white/[0.09] hover:text-slate-200"
               >
                 {item}
               </span>
@@ -78,18 +78,18 @@ export default function ProjectCard({
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-accent-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition hover:bg-cyan-200"
+              className="group/button inline-flex items-center gap-2 rounded-full bg-accent-400 px-4 py-2.5 text-sm font-semibold text-ink-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-200 hover:shadow-[0_10px_28px_rgba(34,211,238,0.18)] active:translate-y-0"
             >
-              Live demo <ArrowUpRight size={16} />
+              Live demo <ArrowUpRight size={16} className="transition-transform duration-300 group-hover/button:translate-x-0.5 group-hover/button:-translate-y-0.5" />
             </a>
           )}
           <a
             href={project.repo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2.5 text-sm font-medium text-slate-200 transition hover:border-white/20 hover:bg-white/[0.07]"
+            className="group/source inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2.5 text-sm font-medium text-slate-200 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-400/25 hover:bg-white/[0.07] hover:text-white active:translate-y-0"
           >
-            <Github size={16} /> Source
+            <Github size={16} className="transition-transform duration-300 group-hover/source:rotate-6 group-hover/source:scale-110" /> Source
           </a>
         </div>
       </div>
