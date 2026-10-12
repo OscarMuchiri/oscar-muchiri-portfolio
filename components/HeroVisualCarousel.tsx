@@ -48,7 +48,7 @@ export default function HeroVisualCarousel() {
     if (paused) return;
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 7000);
+    }, 8000);
 
     return () => window.clearInterval(timer);
   }, [paused]);
@@ -73,12 +73,10 @@ export default function HeroVisualCarousel() {
             <div
               key={slide.id}
               className={[
-                "absolute inset-0 transition-all duration-700 ease-out",
+                "absolute inset-0 transition-[opacity,transform,filter] duration-[1100ms] ease-in-out",
                 index === active
-                  ? "translate-x-0 scale-100 opacity-100"
-                  : index < active
-                    ? "-translate-x-6 scale-[0.985] opacity-0"
-                    : "translate-x-6 scale-[0.985] opacity-0"
+                  ? "scale-100 opacity-100 blur-0"
+                  : "pointer-events-none scale-[1.025] opacity-0 blur-[1px]"
               ].join(" ")}
               aria-hidden={index !== active}
             >
