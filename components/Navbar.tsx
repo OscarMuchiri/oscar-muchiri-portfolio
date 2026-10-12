@@ -3,7 +3,6 @@ import { Github } from "lucide-react";
 const links = [
   ["About", "#about"],
   ["Projects", "#projects"],
-  ["Experience", "#experience"],
   ["Skills", "#skills"]
 ];
 
