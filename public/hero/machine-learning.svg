@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061019"/><stop offset=".55" stop-color="#05070b"/><stop offset="1" stop-color="#07101b"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#38bdf8" stop-opacity=".28"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M38 0H0V38" fill="none" stroke="#67e8f9" stroke-opacity=".04"/></pattern>
+</defs>
+<rect width="640" height="800" fill="url(#bg)"/><rect width="640" height="800" fill="url(#grid)"/>
+<circle cx="320" cy="300" r="260" fill="url(#glow)"/>
+<g stroke="#22d3ee" stroke-opacity=".25" stroke-width="2">
+  <path d="M145 220L250 160 332 240 445 170 515 268 420 360 300 325 210 405 128 330Z"/>
+  <path d="M250 160L300 325M332 240L210 405M445 170L420 360M145 220L332 240M128 330L300 325"/>
+</g>
+<g fill="#67e8f9">
+  <circle cx="145" cy="220" r="9"/><circle cx="250" cy="160" r="9"/><circle cx="332" cy="240" r="11"/><circle cx="445" cy="170" r="9"/><circle cx="515" cy="268" r="9"/><circle cx="420" cy="360" r="10"/><circle cx="300" cy="325" r="12"/><circle cx="210" cy="405" r="9"/><circle cx="128" cy="330" r="8"/>
+</g>
+<g fill="#07111a" stroke="#fff" stroke-opacity=".08">
+  <rect x="78" y="490" width="146" height="92" rx="18"/><rect x="247" y="490" width="146" height="92" rx="18"/><rect x="416" y="490" width="146" height="92" rx="18"/>
+</g>
+<g font-family="Arial,sans-serif" text-anchor="middle">
+  <text x="151" y="530" font-size="25" font-weight="700" fill="#fff">66.8%</text><text x="151" y="556" font-size="12" fill="#64748b">ACCURACY</text>
+  <text x="320" y="530" font-size="25" font-weight="700" fill="#fff">76.4%</text><text x="320" y="556" font-size="12" fill="#64748b">F1 SCORE</text>
+  <text x="489" y="530" font-size="25" font-weight="700" fill="#fff">12</text><text x="489" y="556" font-size="12" fill="#64748b">SIGNALS</text>
+</g>
+<g transform="translate(85 625)">
+  <rect width="470" height="116" rx="22" fill="#07111a" stroke="#fff" stroke-opacity=".08"/>
+  <circle cx="58" cy="58" r="31" fill="#22d3ee" fill-opacity=".09" stroke="#22d3ee" stroke-opacity=".28"/>
+  <path d="M44 58c10-20 18-20 28 0-10 20-18 20-28 0Z" fill="none" stroke="#67e8f9" stroke-width="3"/>
+  <text x="120" y="52" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#fff">Machine Learning</text>
+  <text x="120" y="82" font-family="Arial,sans-serif" font-size="15" fill="#94a3b8">Models · evaluation · intelligent decisions</text>
+</g>
+</svg>
